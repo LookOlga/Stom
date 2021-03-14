@@ -1,0 +1,53 @@
+.news {
+    background-color: #fff;
+
+    ._content {
+        ._items {
+            display: flex;
+            flex-wrap: wrap;
+            flex-grow: 1;
+
+            ._item {
+                ._img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+#{$isDesktop} {
+    .news {
+        padding: 3rem;
+
+        ._content {
+            ._items {
+                margin: 0 -1.5rem;
+
+                ._item {
+                    width: calc(25% - 3rem);
+                    margin: 0 1.5rem 3rem;
+                }
+            }
+        }
+    }
+}
+
+#{$isMobile} {
+    .news {
+        padding: 3rem 0;
+
+        ._content {
+            ._items {
+                ._item {
+                    width: 100%;
+                    margin-bottom: 2rem;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}

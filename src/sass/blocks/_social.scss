@@ -1,0 +1,25 @@
+.social {
+    display: flex;
+
+    ._icon {
+        margin-right: 0.5rem;
+        transition: all 0.1s;
+
+        ._img {
+            display: block;
+
+            svg {
+                width: 20px;
+                height: 22px;
+            }
+        }
+
+        &:hover {
+            ._img {
+                svg {
+                    color: $secondary-text-color
+                }
+            }
+        }
+    }
+}

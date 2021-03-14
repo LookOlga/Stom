@@ -1,0 +1,45 @@
+.item {
+    display: flex;
+    flex-direction: column;
+
+    ._img-link {
+        display: block;
+    }
+
+    ._data {
+        font-size: 1.3rem;
+    }
+
+    ._title {
+        font-weight: 300;
+        color: $primary-text-color;
+        margin-bottom: 1rem;
+    }
+
+    ._top {
+        flex-grow: 1;
+    }
+
+    ._desc {
+        font-size: 1.4rem;
+    }
+
+    &--row {
+        flex-direction: row;
+    }
+}
+
+
+#{$isMobile} {
+    .item {
+        &--row {
+            flex-wrap: wrap;
+
+            ._top {
+                ._img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

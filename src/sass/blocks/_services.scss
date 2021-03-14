@@ -1,0 +1,67 @@
+.services {
+    display: flex;
+    flex-wrap: wrap;
+
+    ._item {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        flex-grow: 1;
+        padding: 2rem;
+        background-color: #fff;
+
+        ._content {
+            flex-grow: 1;
+
+            ._title {
+                font-size: 2rem;
+                margin-bottom: 1rem;
+                font-weight: 700;
+            }
+        }
+
+        ._link {
+            align-self: flex-end;
+            color: $primary-text-color;
+
+            span {
+                display: inline-block;
+                text-align: center;
+                font-size: 18px;
+                line-height: 1;
+                width: 22px;
+                height: 22px;
+                margin-left: 1rem;
+                border-radius: 100%;
+                background-color: $secondary-color;
+                color: #fff;
+            }
+
+            &:hover {
+                color: $secondary-text-color;
+            }
+        }
+    }
+}
+
+#{$isDesktop} {
+    .services {
+        margin: 2rem -1.5rem 0;
+
+        ._item {
+            width: calc(33.333% - 3rem);
+            margin-left: 1.5rem;
+            margin-right: 1.5rem;
+            min-height: 18.5rem;
+        }
+    }
+}
+
+#{$isMobile} {
+    .services {
+        ._item {
+            min-height: 25rem;
+            margin-bottom: 2rem;
+        }
+    }
+}

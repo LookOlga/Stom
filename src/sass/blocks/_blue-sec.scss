@@ -1,0 +1,9 @@
+.blue-sec {
+    background-color: $blue-bg;
+}
+
+#{$isMobile}{
+    .blue-sec {
+        padding-top: 2rem;
+    }
+}

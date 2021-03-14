@@ -1,0 +1,20 @@
+.aside {
+    width: 25%;
+    margin-left: 3rem;
+    ._img-block {
+        display: block;
+        margin-bottom: 2rem;
+        ._img {
+            width: 100%;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+#{$isMobile} {
+    .aside {
+        display: none;
+    }
+}

@@ -1,0 +1,56 @@
+.subnav {
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+
+    ._subnav-items {
+        display: flex;
+        flex-direction: column;
+
+        ._subnav-item {
+            ._link {
+                display: block;
+                font-size: 1.4rem;
+            }
+        }
+    }
+}
+
+#{$isDesktop} {
+    .subnav {
+        display: none;
+        min-width: 26rem;
+        position: absolute;
+        top: 100%;
+        left: 0;
+
+        ._subnav-item {
+            ._link {
+                &:hover {
+                    background-color: $primary-text-color;
+                }
+            }
+        }
+    }
+}
+
+#{$isMobile} {
+    .subnav {
+        height: 0px;
+        transition: height 500ms ease;
+        overflow: hidden;
+
+        ._subnav-item {
+            background-color: $primary-color;
+            border-bottom: solid 1px #ecf5f8;
+
+            ._link {
+                color: #fff;
+            }
+        }
+    }
+}
+
+.showSubnav {
+    display: block;
+
+}

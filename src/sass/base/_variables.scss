@@ -1,0 +1,29 @@
+$isDesktop: 'html.desktop';
+$isMobile: 'html.mobile';
+
+$primary-color: #1ba5b8;
+$secondary-color: #cc0000;
+$primary-text-color: #137684;
+$secondary-text-color: #002c40;
+
+
+
+$blue-bg: #daebf2;
+
+$font-sm: 16px;
+$font-md: 20px;
+$font-lg: 38px;
+$font-lg2: 45px;
+$font-xl: 65px;
+
+#{$isMobile}{
+    .isDesktop{
+      display: none !important;
+    }
+  }
+  
+  #{$isDesktop}{
+    .isMobile{
+      display: none !important;
+    }
+  }

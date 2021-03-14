@@ -1,0 +1,49 @@
+.footer-nav {
+    display: flex;
+    flex-wrap: wrap;
+    ._col {
+        display: flex;
+        flex-direction: column;
+        width: 25%;
+        min-width: 25rem;
+        flex-grow: 1;
+        ._caption {
+            font-size: 1.7rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        ._items {
+            margin-bottom: 2rem;
+            &:first-child{
+                flex-grow: 1;
+            }
+            ._item {
+                font-size: 1.4rem;
+                font-weight: 300;
+                color: $primary-text-color;
+                margin-bottom: 1rem;
+                address {
+                    font-style: normal;
+                    color: $secondary-text-color;
+                }
+            }
+        }
+    }
+}
+
+#{$isDesktop}{
+    .footer-nav{
+        ._col {
+            ._items {
+                width: 26rem;
+                ._item {
+                    ._link {
+                        &:hover {
+                            color: $secondary-text-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

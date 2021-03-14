@@ -1,0 +1,37 @@
+.section-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+
+    ._title {
+        font-size: 2.2rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-right: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    ._items {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 1rem;
+
+        ._item {
+            margin-right: 1rem;
+            margin-bottom: 1rem;
+            
+            ._link {
+                font-size: 1.5rem;
+                font-weight: 700;
+                color: $primary-text-color;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+
+#{$isMobile} {
+    .section-header {
+        
+    }
+}
