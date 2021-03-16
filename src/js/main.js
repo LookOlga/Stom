@@ -1,19 +1,22 @@
-import './custom';
 import './slider';
-import menuActive from './modules/menu';
+import './custom';
+import menu from './modules/menu';
 import subnav from './modules/subnav';
+import search from './modules/search';
 
-window.addEventListener('DOMContentLoaded', () => {
-    'use strict';
+window.addEventListener('load', () => {
+    setTimeout(() => {
+        document.body.classList.add('isLoaded');
+    }, 100);
 
-    const menu = new menuActive({
-        selector: '.burger', 
-        menuItemsParent: '.navigation', 
-        classActive:'menu-active'}
-        ).init();
-
+    if(window.isMobile) {
+        menu('.burger', 'menu-active');
+  }
+  
     subnav('.subnav', '._item.has-subnav ._arrow');
+    search('.open-search ._btn', '._close', 'search-active');
 })
+
 
 
 

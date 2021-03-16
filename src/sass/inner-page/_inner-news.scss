@@ -1,0 +1,31 @@
+.inner-news {
+    ._list {
+        ._list-item {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #eee;
+            &:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+            }
+            ._time {
+                font-size: 1.4rem;
+            }
+
+            ._title-item {
+                font-size: 1.6rem;
+                font-weight: 300;
+                color: $primary-text-color;
+            }
+
+            ._link-item {
+                &:hover {
+                    color: $secondary-text-color;
+                }
+            }
+
+        }
+    }
+}
+

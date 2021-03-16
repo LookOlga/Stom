@@ -21,7 +21,7 @@
             margin-bottom: 1rem;
             
             ._link {
-                font-size: 1.5rem;
+                font-size: 1.4rem;
                 font-weight: 700;
                 color: $primary-text-color;
                 text-transform: uppercase;
@@ -30,8 +30,18 @@
     }
 }
 
-#{$isMobile} {
+#{$isDesktop} {
     .section-header {
-        
+        ._title {
+            &--inner {
+                width: calc(65% - 1rem);
+            }
+        }
+    
+        ._items {
+            &--inner {
+                width: 35%;
+            }
+        }
     }
 }

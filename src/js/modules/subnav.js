@@ -1,9 +1,11 @@
 const subnav = (subnavSelector, arrowBtnsSelector) => {
     const subnav = document.querySelectorAll(subnavSelector);
-    const arrowBtns = document.querySelectorAll(arrowBtnsSelector)
+    const arrowBtns = document.querySelectorAll(arrowBtnsSelector);
+    const body = document.body;
 
 arrowBtns.forEach((item, i) => {
-    item.addEventListener('click', (e) => {  
+    item.addEventListener('click', (e) => {
+        e.preventDefault();
         const target = e.target;
         const subnavMenu = subnav[i];
         const subnavHeight = window.getComputedStyle(subnavMenu).height;
@@ -13,14 +15,12 @@ arrowBtns.forEach((item, i) => {
             subnavMenu.style.height = `${subnavMenu.scrollHeight}px`;
             subnavMenu.style.height = '0';
         }
-        
-        e.stopPropagation();
 
         target.classList.toggle('rotateArrow');
 
     })
-
 })
+
 }
 
 export default subnav;

@@ -7,7 +7,7 @@ $(function() {
       autoplay: true,
       touchDrag: true,
       autoplayTimeout: 5000,
-      smartSpeed: 4000,
+      smartSpeed: 3000,
       slideTransition: 'linear',
       responsive: {
         320: {

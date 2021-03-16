@@ -97,9 +97,9 @@ window.addEventListener('load', onResize);
 window.addEventListener('resize', onResize);
 
 function onResize() {
-  let isMobile = window.innerWidth < 1024;
-  document.documentElement.classList.add(isMobile ? 'mobile' : 'desktop');
-  document.documentElement.classList.remove(!isMobile ? 'mobile' : 'desktop');
+  window.isMobile = window.innerWidth < 1025;
+  document.documentElement.classList.add(window.isMobile ? 'mobile' : 'desktop');
+  document.documentElement.classList.remove(!window.isMobile ? 'mobile' : 'desktop');
 }
 
 /***/ }),
@@ -113,25 +113,29 @@ function onResize() {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _custom__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./custom */ "./src/js/custom.js");
-/* harmony import */ var _custom__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_custom__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _slider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./slider */ "./src/js/slider.js");
-/* harmony import */ var _slider__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_slider__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _slider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./slider */ "./src/js/slider.js");
+/* harmony import */ var _slider__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_slider__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _custom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./custom */ "./src/js/custom.js");
+/* harmony import */ var _custom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_custom__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _modules_menu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/menu */ "./src/js/modules/menu.js");
 /* harmony import */ var _modules_subnav__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/subnav */ "./src/js/modules/subnav.js");
+/* harmony import */ var _modules_search__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/search */ "./src/js/modules/search.js");
 
 
 
 
-window.addEventListener('DOMContentLoaded', () => {
-  'use strict';
 
-  const menu = new _modules_menu__WEBPACK_IMPORTED_MODULE_2__["default"]({
-    selector: '.burger',
-    menuItemsParent: '.navigation',
-    classActive: 'menu-active'
-  }).init();
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    document.body.classList.add('isLoaded');
+  }, 100);
+
+  if (window.isMobile) {
+    Object(_modules_menu__WEBPACK_IMPORTED_MODULE_2__["default"])('.burger', 'menu-active');
+  }
+
   Object(_modules_subnav__WEBPACK_IMPORTED_MODULE_3__["default"])('.subnav', '._item.has-subnav ._arrow');
+  Object(_modules_search__WEBPACK_IMPORTED_MODULE_4__["default"])('.open-search ._btn', '._close', 'search-active');
 });
 
 /***/ }),
@@ -145,31 +149,39 @@ window.addEventListener('DOMContentLoaded', () => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-class menuActive {
-  constructor(obj) {
-    this.selector = obj.selector;
-    this.menuItemsParent = obj.menuItemsParent;
-    this.classActive = obj.classActive;
-  }
+const menu = (burgerSelector, classActive) => {
+  const burger = document.querySelector(burgerSelector);
+  burger.addEventListener('click', () => {
+    document.body.classList.toggle(classActive);
+  });
+};
 
-  init() {
-    this.selector = document.querySelector(this.selector);
-    this.menuItemsParent = document.querySelector(this.menuItemsParent);
-    this.selector.addEventListener('click', () => {
-      document.body.classList.toggle(this.classActive);
-    });
-    this.menuItemsParent.addEventListener('click', e => {
-      const target = e.target;
+/* harmony default export */ __webpack_exports__["default"] = (menu);
 
-      if (target.tagName === 'A') {
-        document.body.classList.toggle(this.classActive);
-      }
-    });
-  }
+/***/ }),
 
-}
+/***/ "./src/js/modules/search.js":
+/*!**********************************!*\
+  !*** ./src/js/modules/search.js ***!
+  \**********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-/* harmony default export */ __webpack_exports__["default"] = (menuActive);
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+const search = (btnOpenSelector, btnCloseSelector, classActive) => {
+  const btnOpen = document.querySelector(btnOpenSelector);
+  const btnClose = document.querySelector(btnCloseSelector);
+  const body = document.body;
+  btnOpen.addEventListener('click', () => {
+    body.classList.add(classActive);
+  });
+  btnClose.addEventListener('click', () => {
+    body.classList.remove(classActive);
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (search);
 
 /***/ }),
 
@@ -185,8 +197,10 @@ __webpack_require__.r(__webpack_exports__);
 const subnav = (subnavSelector, arrowBtnsSelector) => {
   const subnav = document.querySelectorAll(subnavSelector);
   const arrowBtns = document.querySelectorAll(arrowBtnsSelector);
+  const body = document.body;
   arrowBtns.forEach((item, i) => {
     item.addEventListener('click', e => {
+      e.preventDefault();
       const target = e.target;
       const subnavMenu = subnav[i];
       const subnavHeight = window.getComputedStyle(subnavMenu).height;
@@ -198,7 +212,6 @@ const subnav = (subnavSelector, arrowBtnsSelector) => {
         subnavMenu.style.height = '0';
       }
 
-      e.stopPropagation();
       target.classList.toggle('rotateArrow');
     });
   });
@@ -224,7 +237,7 @@ $(function () {
     autoplay: true,
     touchDrag: true,
     autoplayTimeout: 5000,
-    smartSpeed: 4000,
+    smartSpeed: 3000,
     slideTransition: 'linear',
     responsive: {
       320: {

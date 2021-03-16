@@ -49,7 +49,7 @@
         .owl-next {
             position: absolute;
             top: 50%;
-            transform: translateY(-75%)
+            transform: translateY(-50%)
         }
 
         .owl-next {
@@ -58,6 +58,10 @@
 
         .owl-prev {
             left: 0;
+        }
+
+        .owl-dots {
+            display: none;
         }
     }
 }

@@ -42,9 +42,19 @@
                 ._item {
                     width: 100%;
                     margin-bottom: 2rem;
+                }
+            }
+        }
+    }
 
-                    &:last-child {
-                        margin-bottom: 0;
+    @media (min-width: 767px) and (max-width: 1024px) {
+        .news {
+            ._content {
+                ._items {
+                    margin: 0 -1rem;
+                    ._item {
+                        width: calc(50% - 2rem);
+                        margin: 0 1rem 2rem;
                     }
                 }
             }

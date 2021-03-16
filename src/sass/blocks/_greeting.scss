@@ -17,6 +17,7 @@
             ._name {
                 font-size: 1.7rem;
                 color: $primary-text-color;
+                margin-bottom: 0.5rem;
             }
             ._prof {
                 font-size: 1.4rem;
@@ -29,11 +30,11 @@
             }
             ._title {
                 font-size: 2.2rem;
-                font-weight: 300;
+                font-weight: 400;
             }
             ._subtitle {
                 font-size: 1.9rem;
-                font-weight: 300;
+                font-weight: 400;
             }
         }      
     }
@@ -55,4 +56,17 @@
             }
         }
     }
+}
+
+#{$isMobile}{
+    @media only screen
+and (min-device-width: 768px)
+and (max-device-width: 1366px)
+and (orientation: landscape) {
+    .greeting {
+        ._box {
+            width: 100% !important;
+        }
+    }
+}
 }

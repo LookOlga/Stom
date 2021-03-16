@@ -2,6 +2,15 @@
     background-color: $blue-bg;
 }
 
+#{$isDesktop}{
+    .blue-sec {
+        ._container {
+            position: relative;
+            top: -3rem;
+        }
+    }
+}
+
 #{$isMobile}{
     .blue-sec {
         padding-top: 2rem;

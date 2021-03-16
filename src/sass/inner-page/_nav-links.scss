@@ -1,0 +1,17 @@
+.nav-links {
+    ._items {
+        display: flex;
+        align-items: center;
+        span {
+            font-size: 13px;
+            margin: 3px 10px 0;
+        }
+        ._item {
+            ._link {
+                font-size: 1.4rem;
+                font-weight: 300;
+            }
+        }
+
+    }
+}

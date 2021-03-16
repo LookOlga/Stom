@@ -1,6 +1,6 @@
 .advantages {
     width: 100%;
-    padding: 2rem;
+    padding: 1.5rem;
     background-color: #fff;
 
     ._items {
@@ -17,10 +17,8 @@
 
 #{$isDesktop} {
     .advantages {
-        margin-top: -5rem;
-
         ._item {
-            padding: 0 2rem;
+            padding: 0 1rem;
             width: 20%;
             flex-grow: 1;
             text-align: center;

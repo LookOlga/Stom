@@ -7,7 +7,8 @@
         flex-direction: column;
 
         ._subnav-item {
-            ._link {
+            padding: 1.3rem;
+            ._subnav-link {
                 display: block;
                 font-size: 1.4rem;
             }
@@ -24,10 +25,12 @@
         left: 0;
 
         ._subnav-item {
-            ._link {
+            display: block;
+            background-color: $primary-color;
+            color: #fff;
                 &:hover {
                     background-color: $primary-text-color;
-                }
+                
             }
         }
     }
@@ -43,7 +46,7 @@
             background-color: $primary-color;
             border-bottom: solid 1px #ecf5f8;
 
-            ._link {
+            ._subnav-link {
                 color: #fff;
             }
         }

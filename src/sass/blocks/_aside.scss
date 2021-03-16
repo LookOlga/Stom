@@ -1,5 +1,5 @@
 .aside {
-    width: 25%;
+    width: calc(25% - 3rem);
     margin-left: 3rem;
     ._img-block {
         display: block;
@@ -10,11 +10,19 @@
         &:last-child {
             margin-bottom: 0;
         }
+        &--inner {
+            margin: 5rem 0;
+        }
+    }
+
+    &--inner {
+        margin-left: 0;
+        margin-right: 3rem;
     }
 }
 
 #{$isMobile} {
     .aside {
-        display: none;
+        width: 100%;
     }
 }

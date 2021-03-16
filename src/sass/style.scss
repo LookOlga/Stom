@@ -8,8 +8,11 @@
 
 @import 'blocks/header';
 @import 'blocks/burger';
+@import 'blocks/subheader';
+@import 'blocks/search';
 @import 'blocks/navigation';
 @import 'blocks/subnav';
+@import 'blocks/main';
 @import 'blocks/about';
 @import 'blocks/blue-sec';
 @import 'blocks/advantages';
@@ -21,11 +24,16 @@
 @import 'blocks/courses';
 @import 'blocks/publications';
 @import 'blocks/aside';
-@import 'blocks/main-content';
 @import 'blocks/partners';
 @import 'blocks/footer';
 @import 'blocks/footer-nav';
 @import 'blocks/social';
+@import 'blocks/copyrights';
+
+@import 'inner-page/head';
+@import 'inner-page/nav-links';
+@import 'inner-page/inner-menu';
+@import 'inner-page/inner-news';
 
 html {
     @extend %CLEAR-HTML;
@@ -105,8 +113,8 @@ img {
     width: 100%;
     height: 100%;
     margin: 0 auto;
-
     background-color: #fff;
+    overflow: hidden;
 }
 
 .container {

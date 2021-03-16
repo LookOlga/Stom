@@ -1,0 +1,54 @@
+.main {
+    &--inner {
+        ._container {
+            display: flex;
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+
+            ._right-side {
+                width: 75%;
+                color: #222;
+                font-weight: 400;
+                ._text, ._list {
+                    color: inherit;
+                    margin-bottom: 2rem;
+                }
+                ._subtitle {
+                    font-size: 1.6rem;
+                    font-weight: inherit;
+                    &--mb20 {
+                        margin-bottom: 2rem;
+                    }
+                }
+                ._list {
+                    ._item {
+                        margin-bottom: 2rem;
+                    }
+                    &--marked {
+                        list-style-type: disc;
+                        padding-left: 4rem;
+                        margin-bottom: 0;
+                        ._item {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+#{$isMobile} {
+    .main{
+        &--inner {
+            ._container {
+                flex-direction: column-reverse;
+                ._right-side {
+                    width: 100%;
+                    margin-bottom: 5rem;
+                }
+            }
+        }
+    }
+}

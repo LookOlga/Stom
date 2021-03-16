@@ -1,0 +1,15 @@
+.subheader {
+   ._container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+   }
+}
+
+#{$isDesktop} {
+   .subheader {
+      ._container {
+         position: relative;
+      }
+   }
+}
