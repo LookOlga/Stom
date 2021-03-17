@@ -128,7 +128,7 @@ __webpack_require__.r(__webpack_exports__);
 window.addEventListener('load', () => {
   setTimeout(() => {
     document.body.classList.add('isLoaded');
-  }, 100);
+  }, 150);
 
   if (window.isMobile) {
     Object(_modules_menu__WEBPACK_IMPORTED_MODULE_2__["default"])('.burger', 'menu-active');

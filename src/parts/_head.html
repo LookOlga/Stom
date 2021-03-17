@@ -3,10 +3,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
-        rel="stylesheet">
+          rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+          href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/style.min.css">
     <title>Document</title>
     <style>
@@ -23,9 +23,9 @@
             position: fixed;
             top: 0;
             left: 0;
-            z-index: 9999;
-            width: 100%;
-            height: 100%;
+            z-index: 99999;
+            width: 100vw;
+            height: 100vh;
             transition: .4s opacity, .4s;
             display: flex;
             justify-content: center;
@@ -34,17 +34,25 @@
         }
 
         #preloader p {
-            font-size: 2rem;
+            font-size: 20px;
         }
 
         #preloader img {
-            margin-bottom: 2rem;
+            margin-bottom: 20px;
         }
 
         .isLoaded #preloader {
             opacity: 0;
             z-index: -999;
             user-select: none;
+        }
+
+        .subheader ._container {
+            position: relative;
+        }
+
+        body.isLoaded .subheader ._container {
+            position: static;
         }
     </style>
 </head>

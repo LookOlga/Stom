@@ -48,15 +48,16 @@
 
 #{$isMobile} {
     .navigation {
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 100%;
-        transform: translateX(0%);
+        transform: translateX(0);
         width: 100%;
         height: 100%;
         background-color: #fff;
         transition: transform 0.6s ease-in-out;
-        z-index: 1;
+        z-index: 100;
+        overflow: auto;
 
         ._container {
             padding: 0;
@@ -99,11 +100,20 @@
             }
         }
     }
+    @media (min-width: 1024px)
+    and(orientation: landscape) {
+        .navigation {
+            width: 50%;
+        }
+    }
 }
 
 body.menu-active {
     overflow: hidden;
-
+    .overlay {
+        opacity: 1;
+        z-index: 10;
+    }
     .navigation {
         transform: translateX(-100%);
     }

@@ -36,6 +36,9 @@
                 font-size: 1.9rem;
                 font-weight: 400;
             }
+            ._text {
+                color: #222;
+            }
         }      
     }
 }
@@ -59,10 +62,9 @@
 }
 
 #{$isMobile}{
-    @media only screen
-and (min-device-width: 768px)
-and (max-device-width: 1366px)
-and (orientation: landscape) {
+    @media (min-width: 768px)
+            and (max-width: 1367px)
+            and (orientation: landscape) {
     .greeting {
         ._box {
             width: 100% !important;

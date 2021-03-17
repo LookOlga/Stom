@@ -4,10 +4,11 @@ import menu from './modules/menu';
 import subnav from './modules/subnav';
 import search from './modules/search';
 
+
 window.addEventListener('load', () => {
     setTimeout(() => {
         document.body.classList.add('isLoaded');
-    }, 100);
+    }, 150);
 
     if(window.isMobile) {
         menu('.burger', 'menu-active');

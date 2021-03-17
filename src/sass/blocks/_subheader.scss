@@ -9,7 +9,7 @@
 #{$isDesktop} {
    .subheader {
       ._container {
-         position: relative;
+         position: relative !important;
       }
    }
 }
