@@ -1,0 +1,57 @@
+.clinics {
+  ._item {
+    display: flex;
+    align-items: center;
+    border: 1px solid $blue-bg;
+    padding: 1rem;
+    margin-bottom: 1rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    ._desc {
+      ._item-subtitle {
+        font-size: 1.7rem;
+        font-weight: 700;
+        color: $primary-text-color;
+        margin-bottom: 1rem;
+      }
+
+      ._address, ._phone {
+        font-size: 1.4rem;
+        font-style: normal;
+        color: $grey-color;
+        margin-bottom: 1rem;
+      }
+
+      ._website {
+        font-size: 1.4rem;
+        color: $primary-text-color;
+      }
+
+      ._contact {
+        position: relative;
+        padding-left: 2rem;
+      }
+
+      ._icon {
+        position: absolute;
+        top: 3px;
+        left: 0;
+        width: 12px;
+        height: 15px;
+      }
+    }
+  }
+}
+
+#{$isMobile} {
+  @media (max-width: 576px) {
+    .clinics {
+      ._item {
+        flex-direction: column;
+      }
+    }
+  }
+}
