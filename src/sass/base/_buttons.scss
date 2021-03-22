@@ -19,7 +19,14 @@
     &--primary {
         background-color: $primary-color;
         &:hover {
-            background-color: darken($primary-color, 5%);
+            background-color: darken($secondary-text-color, 5%);
+        }
+    }
+
+    &--secondary {
+        background-color: $primary-text-color;
+        &:hover {
+            background-color: darken($secondary-text-color, 5%);
         }
     }
 }

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('parts/_head.html')
+
+<body>
+@@include('parts/_preloader.html')
+<div class="page">
+    @@include('parts/_header.html')
+    @@include('parts/_subheader.html')
+    <div class="head">
+        <div class="container">
+            <h1 class="_title">Президиум</h1>
+            <nav class="nav-links">
+                <ul class="_items">
+                    <li class="_item">
+                        <a href="/" class="_link">Главная</a>
+                    </li>
+                    <span>></span>
+                    <li class="_item">
+                        <a href="association.html" class="_link">Ассоциация</a>
+                    </li>
+                    <span>></span>
+                    <li class="_item">
+                        <a href="documents.html" class="_link">Правление</a>
+                    </li>
+                    <span>></span>
+                    <li class="_item">
+                        <a href="documents.html" class="_link">Президиум</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <main class="main main--inner">
+        <div class="container _container">
+            <aside class="aside aside--inner">
+                @@include('parts/_inner-menu-association.html')
+                <a href="#" class="_img-block _img-block--inner isDesktop">
+                    <img src="http://placehold.it/295x450" alt="" class="_img">
+                </a>
+                @@include('parts/_inner-news.html')
+            </aside>
+            <div class="_right-side">
+                <article class="profile">
+                    <div class="_header">
+                        <h2 class="_prof-title">Чернус Леонид Александрович</h2>
+                        <h3 class="_prof-subtitle">
+                            Вице-президент
+                        </h3>
+                    </div>
+                    <div class="_introduction">
+                        <div class="_photo">
+                            <img src="img/direction/presidium/chernus.jpg" alt="Чернус Леонид Александрович" class="_img">
+                        </div>
+                        <p class="_text">Леонид Чернус - кандидат медицинских наук, заслуженный врач Российской Федерации, врач-стоматолог-хирург высшей квалификационной категории. Вице-президент Московской областной ассоциации стоматологов и челюстно-лицевых хирургов, председатель экспертной комиссии по Московской области.</p>
+                    </div>
+
+                </article>
+            </div>
+        </div>
+    </main>
+    @@include('parts/_partners.html')
+    @@include('parts/_footer.html')
+</div>
+@@include('parts/_sprite.html')
+@@include('parts/_scripts.html')
+
+</body>
+
+</html>

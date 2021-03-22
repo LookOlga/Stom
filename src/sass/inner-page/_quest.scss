@@ -1,0 +1,31 @@
+.quest {
+  padding: 3rem;
+  margin-top: 2rem;
+  background-color: #f3f8fe;
+
+  ._label {
+    width: 50%;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #000033;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+  }
+
+  ._mail-link {
+    display: flex;
+    align-items: center;
+    ._icon {
+      width: 20px;
+      height: 15px;
+      margin-right: 1rem;
+    }
+    ._link {
+      color: $primary-text-color;
+
+      &:hover {
+        color: $secondary-text-color;
+      }
+    }
+  }
+}

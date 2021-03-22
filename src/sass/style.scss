@@ -32,8 +32,14 @@
 
 @import 'inner-page/head';
 @import 'inner-page/nav-links';
-@import 'inner-page/inner-menu';
+@import 'inner-page/inner-menu-association';
 @import 'inner-page/inner-news';
+@import 'inner-page/_direction-photos.scss';
+@import 'inner-page/_members.scss';
+@import 'inner-page/_quest.scss';
+@import 'inner-page/_clinic-filter.scss';
+@import 'inner-page/_select.scss';
+@import 'inner-page/_profile.scss';
 
 html {
     @extend %CLEAR-HTML;
@@ -89,6 +95,10 @@ input:-webkit-autofill:active {
 }
 textarea{
     @extend %CLEAR-FORM-TEXTAREA;
+}
+
+select {
+    @extend %CLEAR-FORM-SELECT;
 }
 
 h1, h2, h3, h4, h5, h6 {

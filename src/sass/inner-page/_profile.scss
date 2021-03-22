@@ -1,0 +1,68 @@
+.profile {
+  ._header {
+    padding-bottom: 1.5rem;
+    border-bottom: 3px solid $blue-bg;
+    margin-bottom: 2rem;
+
+    ._prof-title {
+      font-size: 2.9rem;
+      font-weight: 400;
+      color: $secondary-text-color;
+      margin-bottom: 2rem;
+    }
+
+    ._prof-subtitle {
+      font-size: 1.9rem;
+      font-weight: 400;
+      color: $secondary-text-color;
+    }
+  }
+
+  ._introduction {
+    margin-bottom: 2rem;
+
+    ._photo {
+      width: 32%;
+      float: right;
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+#{$isDesktop} {
+  .profile {
+    ._introduction {
+      ._photo {
+        margin-left: 2rem;
+      }
+    }
+  }
+}
+
+#{$isMobile} {
+  .profile {
+    ._introduction {
+      ._photo {
+        margin-left: 2rem;
+      }
+    }
+  }
+
+  @media (max-width: 650px) {
+    .profile {
+      ._introduction {
+        display: flex;
+        flex-direction: column;
+
+        ._photo {
+          width: 100%;
+          margin-left: 0;
+
+          ._img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
