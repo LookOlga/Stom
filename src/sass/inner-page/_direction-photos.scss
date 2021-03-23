@@ -1,55 +1,65 @@
 .direction-photos {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 -1.5rem;
+    display: flex;
+    flex-wrap: wrap;
 
-  ._item {
-    min-height: 365px;
-    margin: 0 1.5rem 1rem;
-    border: 1px solid $blue-bg;
-    min-width: 20rem;
-    ._link-photo {
-      width: 100%;
-      img {
-        width: 100%;
-      }
-    }
-    ._desc {
-      padding: 1rem;
-      ._name {
-        font-size: 1.5rem;
-        font-weight: 700;
-        color: $primary-text-color;
-        margin-bottom: 1rem;
-      }
+    ._item {
+        min-height: 365px;
+        border: 1px solid $blue-bg;
+        min-width: 20rem;
 
-      ._position {
-        font-size: 1.3rem;
-      }
+        ._link-photo {
+            width: 100%;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        ._desc {
+            padding: 1rem;
+
+            ._name {
+                font-size: 1.5rem;
+                font-weight: 700;
+                color: $primary-text-color;
+                margin-bottom: 1rem;
+            }
+
+            ._position {
+                font-size: 1.3rem;
+            }
+        }
     }
-  }
 }
 
 #{$isDesktop} {
-  .direction-photos {
-    ._item {
-      width: calc(25% - 3rem);
+    .direction-photos {
+        margin: 0 -1.5rem;
+
+        ._item {
+            width: calc(25% - 3rem);
+            margin: 0 1.5rem 1rem;
+        }
     }
-  }
 }
 
 #{$isMobile} {
-  @media (min-width: 567px) and (max-width: 1024px) {
-    .direction-photos {
-      ._item {
-        width: calc(50% - 3rem) !important;
-      }
+    @media (min-width: 567px) and (max-width: 1024px) {
+        .direction-photos {
+            margin: 0 -1.5rem;
+
+            ._item {
+                width: calc(50% - 3rem) !important;
+                margin: 0 1.5rem 1rem;
+            }
+        }
     }
-  }
-  .direction-photos {
-    ._item {
-      width: 100%;
-      margin-right: 0;
+    @media (max-width: 566px) {
+        .direction-photos {
+            ._item {
+                width: 100%;
+                margin: 0 0 1rem;
+            }
+        }
     }
-  }
 }

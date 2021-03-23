@@ -31,16 +31,19 @@
 @import 'blocks/copyrights';
 
 @import 'inner-page/head';
+@import 'inner-page/right-side';
 @import 'inner-page/nav-links';
 @import 'inner-page/inner-menu-association';
 @import 'inner-page/inner-news';
-@import 'inner-page/_direction-photos.scss';
-@import 'inner-page/_members.scss';
+@import 'inner-page/_direction-photos';
+@import 'inner-page/_members';
 @import 'inner-page/_quest.scss';
-@import 'inner-page/_clinic-filter.scss';
-@import 'inner-page/_select.scss';
-@import 'inner-page/_profile.scss';
-@import 'inner-page/_clinics.scss';
+@import 'inner-page/_clinic-filter';
+@import 'inner-page/_select';
+@import 'inner-page/_profile';
+@import 'inner-page/_clinics';
+@import 'inner-page/_clinic-page';
+@import 'inner-page/_clinic-contacts';
 
 html {
     @extend %CLEAR-HTML;
@@ -117,6 +120,10 @@ img {
     max-width: 100%;
     height: auto;
     object-fit: cover;
+}
+
+path {
+    fill: currentColor;
 }
 
 .page {

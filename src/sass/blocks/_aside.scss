@@ -24,11 +24,11 @@
         padding: 2rem;
         padding-right: 6rem;
         margin-top: 2rem;
-        background-color: $primary-color;
         color: #fff;
         font-size: 1.15vw;
         font-weight: 700;
         text-transform: uppercase;
+        transition: $btn-transition;
         svg {
             position: absolute;
             top: 50%;

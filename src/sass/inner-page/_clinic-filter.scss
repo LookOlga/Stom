@@ -2,14 +2,16 @@
     padding: 2.6rem 1.5rem;
     border: 3px solid $blue-bg;
     margin-bottom: 2rem;
-  ._label {
-      font-weight: 700;
-      color: $secondary-text-color;
-      margin-bottom: 7px;
-  }
-  ._form {
-    ._buttons {
-      margin-top: 2rem;
+
+    ._label {
+        font-weight: 700;
+        color: $secondary-text-color;
+        margin-bottom: 7px;
     }
-  }
+
+    ._form {
+        ._buttons {
+            margin-top: 2rem;
+        }
+    }
 }

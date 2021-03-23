@@ -30,27 +30,8 @@
     </div>
     <main class="main main--inner">
         <div class="container _container">
-            <aside class="aside aside--inner">
-                @@include('parts/_inner-menu-members.html')
-                <a href="#" class="_btn">Вступить в ассоциацию
-                    <svg>
-                        <use xlink:href="#check"></use>
-                    </svg>
-                </a>
-                <div class="quest">
-                    <p class="_label">Остались вопросы?</p>
-                    <div class="_mail-link">
-                        <svg class="_icon">
-                            <use xlink:href="#mail"></use>
-                        </svg>
-                        <a href="mailto:info@mosoblstom.ru" class="_link">info@mosoblstom.ru</a>
-                    </div>
-                </div>
-                <a href="#" class="_img-block _img-block--inner _img-block--border isDesktop">
-                    <img src="img/banners/banner_vacant.jpg" alt="vacancies" class="_img">
-                </a>
-            </aside>
-            <div class="_right-side">
+            @@include('parts/_aside-members.html')
+            <div class="right-side">
                 <div class="clinic-filter">
                     <p class="_label">Город</p>
                     <form action="#" method="get" class="_form">
@@ -81,40 +62,43 @@
                 <ul class="clinics">
                     <li class="_item">
                         <div class="_img">
-                            <a href="#" class="_img-link">
+                            <a href="state-clinic-item.html" class="_img-link">
                                 <img src="img/clinics/domodedovo.jpg"
                                     alt="ГАУЗ МО Домодедовская городская стоматологическая поликлиника">
                             </a>
                         </div>
                         <div class="_desc">
                             <h3 class="_item-subtitle">
-                                <a href="#" class="_item-link">ГАУЗ МО Домодедовская городская стоматологическая поликлиника</a>
+                                <a href="state-clinic-item.html" class="_item-link">ГАУЗ МО Домодедовская городская стоматологическая поликлиника</a>
                             </h3>
-                            <address class="_address _contact">
-                                <svg class="_icon">
-                                    <use xlink:href="#map"></use>
-                                </svg>
-                                Домодедово, мкр. Центральный, Каширское шоссе, д.36 а
-                            </address>
-                            <div class="_phone _contact">
-                                <svg class="_icon">
-                                    <use xlink:href="#mobile"></use>
-                                </svg>
-                                +7(496)792-90-03
+                            <div class="clinic-contacts">
+                                <address class="_address _contact">
+                                    <svg class="_icon">
+                                        <use xlink:href="#map"></use>
+                                    </svg>
+                                    Домодедово, мкр. Центральный, Каширское шоссе, д.36 а
+                                </address>
+                                <div class="_phone _contact">
+                                    <svg class="_icon">
+                                        <use xlink:href="#mobile"></use>
+                                    </svg>
+                                    +7(496)792-90-03
+                                </div>
+                                <div class="_website _contact">
+                                    <a href="http://dgsp.ru/">
+                                    <svg class="_icon">
+                                        <use xlink:href="#link"></use>
+                                    </svg>
+                                    http://dgsp.ru/
+                                </a>
+                                </div>
                             </div>
-                            <a href="http://dgsp.ru/" class="_website _contact">
-                                <svg class="_icon">
-                                    <use xlink:href="#link"></use>
-                                </svg>
-                                http://dgsp.ru/
-                            </a>
                         </div>
                     </li>
                 </ul>
             </div>
         </div>
     </main>
-    @@include('parts/_partners.html')
     @@include('parts/_footer.html')
 </div>
 @@include('parts/_sprite.html')

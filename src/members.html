@@ -24,32 +24,12 @@
     </div>
     <main class="main main--inner">
         <div class="container _container">
-            <aside class="aside aside--inner">
-                @@include('parts/_inner-menu-members.html')
-                <a href="#" class="_btn">Вступить в ассоциацию
-                    <svg>
-                        <use xlink:href="#check"></use>
-                    </svg>
-                </a>
-                <div class="quest">
-                    <p class="_label">Остались вопросы?</p>
-                    <div class="_mail-link">
-                        <svg class="_icon">
-                            <use xlink:href="#mail"></use>
-                        </svg>
-                        <a href="mailto:info@mosoblstom.ru" class="_link">info@mosoblstom.ru</a>
-                    </div>
-                </div>
-                <a href="#" class="_img-block _img-block--inner _img-block--border isDesktop">
-                    <img src="img/banners/banner_vacant.jpg" alt="vacancies" class="_img">
-                </a>
-            </aside>
-            <div class="_right-side">
+            @@include('parts/_aside-members.html')
+            <div class="right-side">
 
             </div>
         </div>
     </main>
-    @@include('parts/_partners.html')
     @@include('parts/_footer.html')
 </div>
 @@include('parts/_sprite.html')

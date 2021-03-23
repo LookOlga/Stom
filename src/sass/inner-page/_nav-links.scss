@@ -1,6 +1,7 @@
 .nav-links {
     ._items {
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         span {
             font-size: 13px;

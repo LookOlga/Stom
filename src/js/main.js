@@ -10,10 +10,10 @@ window.addEventListener('load', () => {
         document.body.classList.add('isLoaded');
     }, 150);
 
-    if(window.isMobile) {
+    if (window.isMobile) {
         menu('.burger', 'menu-active');
-  }
-  
+    }
+
     subnav('.subnav', '._item.has-subnav ._arrow');
     search('.open-search ._btn', '._close', 'search-active');
 })

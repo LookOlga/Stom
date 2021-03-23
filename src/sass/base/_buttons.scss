@@ -3,7 +3,7 @@
     padding: 1rem 1.6rem;
     font-size: 1.4rem;
     color: #fff;
-    transition: background-color 0.2s ease;
+    transition: $btn-transition;
     &--warning {
         background-color: $secondary-color;
         span {
@@ -19,14 +19,14 @@
     &--primary {
         background-color: $primary-color;
         &:hover {
-            background-color: darken($secondary-text-color, 5%);
+            background-color: $secondary-text-color;
         }
     }
 
     &--secondary {
         background-color: $primary-text-color;
         &:hover {
-            background-color: darken($secondary-text-color, 5%);
+            background-color: $secondary-text-color;
         }
     }
 }

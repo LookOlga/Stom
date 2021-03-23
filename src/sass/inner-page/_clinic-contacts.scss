@@ -1,0 +1,52 @@
+.clinic-contacts {
+    ._address, ._phone, ._mail {
+        font-size: 1.4rem;
+        font-style: normal;
+        color: $grey-color;
+    }
+
+    ._mail {
+
+    }
+    ._website {
+        font-size: 1.4rem;
+
+        a {
+            color: $primary-text-color;
+
+            &:hover {
+                color: $secondary-text-color;
+            }
+        }
+    }
+
+    ._contact {
+        position: relative;
+        padding-left: 2rem;
+        margin-bottom: 1rem;
+        svg {
+            color: #ccc;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &--card {
+            font-size: 1.6rem;
+            padding-left: 2.5rem;
+            svg {
+                width: 15px;
+                height: 18px;
+            }
+        }
+    }
+
+    ._icon {
+        position: absolute;
+        top: 3px;
+        left: 0;
+        width: 12px;
+        height: 15px;
+    }
+}

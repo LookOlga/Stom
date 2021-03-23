@@ -16,6 +16,8 @@ $font-lg: 38px;
 $font-lg2: 45px;
 $font-xl: 65px;
 
+$btn-transition: background-color 0.2s linear;
+
 #{$isMobile}{
     .isDesktop{
       display: none !important;
