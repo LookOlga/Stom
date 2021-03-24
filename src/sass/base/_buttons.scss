@@ -30,3 +30,25 @@
         }
     }
 }
+
+.btn-send {
+    position: relative;
+    font-size: 1.6rem;
+    text-transform: capitalize;
+    color: #fff;
+    width: 100%;
+    padding-right: 6rem;
+    span {
+        display: block;
+    }
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: url('../img/icons/envelope.svg') center center no-repeat $primary-text-color;
+        width: 4rem;
+        height: 100%;
+    }
+}

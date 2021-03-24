@@ -6,6 +6,21 @@
 @import 'base/variables';
 @import 'base/buttons';
 
+@import 'inner-page/head';
+@import 'inner-page/right-side';
+@import 'inner-page/nav-links';
+@import 'inner-page/inner-menu-association';
+@import 'inner-page/inner-news';
+@import 'inner-page/direction-photos';
+@import 'inner-page/members';
+@import 'inner-page/quest.scss';
+@import 'inner-page/clinic-filter';
+@import 'inner-page/select';
+@import 'inner-page/profile';
+@import 'inner-page/clinics';
+@import 'inner-page/clinic-page';
+@import 'inner-page/clinic-contacts';
+
 @import 'blocks/header';
 @import 'blocks/burger';
 @import 'blocks/subheader';
@@ -24,26 +39,13 @@
 @import 'blocks/courses';
 @import 'blocks/publications';
 @import 'blocks/aside';
+@import 'blocks/form-aside';
 @import 'blocks/partners';
 @import 'blocks/footer';
 @import 'blocks/footer-nav';
 @import 'blocks/social';
 @import 'blocks/copyrights';
 
-@import 'inner-page/head';
-@import 'inner-page/right-side';
-@import 'inner-page/nav-links';
-@import 'inner-page/inner-menu-association';
-@import 'inner-page/inner-news';
-@import 'inner-page/_direction-photos';
-@import 'inner-page/_members';
-@import 'inner-page/_quest.scss';
-@import 'inner-page/_clinic-filter';
-@import 'inner-page/_select';
-@import 'inner-page/_profile';
-@import 'inner-page/_clinics';
-@import 'inner-page/_clinic-page';
-@import 'inner-page/_clinic-contacts';
 
 html {
     @extend %CLEAR-HTML;

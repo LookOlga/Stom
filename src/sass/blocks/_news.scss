@@ -27,8 +27,16 @@
                 ._item {
                     width: calc(25% - 3rem);
                     margin: 0 1.5rem 3rem;
+                    &--inner {
+                        width: calc(33.333% - 3rem);
+                    }
                 }
             }
+        }
+        &--inner {
+            padding: 0 0 2rem;
+            margin-bottom: 2rem;
+            border-bottom: 3px solid $blue-bg;
         }
     }
 }
@@ -42,6 +50,20 @@
                 ._item {
                     width: 100%;
                     margin-bottom: 2rem;
+                }
+            }
+        }
+        &--inner {
+            padding: 0 0 2rem;
+            margin-bottom: 2rem;
+            border-bottom: 3px solid $blue-bg;
+            ._content {
+                ._items {
+                    ._item {
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                    }
                 }
             }
         }
